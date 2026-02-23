@@ -1,0 +1,31 @@
+package com.dominik.control.kidshield.dashboard.data.model.dto
+
+data class LoginRequest(
+    val email: String,
+    val password: String
+)
+
+data class RegisterRequest(
+    val email: String,
+    val password: String,
+    val userType: UserType
+)
+
+data class RefreshRequest(
+    val refreshToken: String
+)
+
+data class AuthResponse(
+    val token: String,
+    val refreshToken: String
+)
+
+enum class UserType{
+    ADMIN,
+    SUPERVISOR,
+    MONITORED
+}
+
+data class MessageResponse(
+    val message: String,
+)
