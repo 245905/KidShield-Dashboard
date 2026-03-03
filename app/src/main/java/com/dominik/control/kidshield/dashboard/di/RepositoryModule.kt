@@ -8,6 +8,8 @@ import com.dominik.control.kidshield.dashboard.data.repository.AuthRepository
 import com.dominik.control.kidshield.dashboard.data.repository.AuthRepositoryImpl
 import com.dominik.control.kidshield.dashboard.data.repository.HourlyStatsRepository
 import com.dominik.control.kidshield.dashboard.data.repository.HourlyStatsRepositoryImpl
+import com.dominik.control.kidshield.dashboard.data.repository.PairingRepository
+import com.dominik.control.kidshield.dashboard.data.repository.PairingRepositoryImpl
 import com.dominik.control.kidshield.dashboard.data.repository.RouteRepository
 import com.dominik.control.kidshield.dashboard.data.repository.RouteRepositoryImpl
 import com.dominik.control.kidshield.dashboard.data.repository.SensorInfoRepository
@@ -62,4 +64,7 @@ abstract class RepositoryModule{
 
     @Binds
     abstract fun bindSensorInfoRepo(impl: SensorInfoRepositoryImpl): SensorInfoRepository
+
+    @Binds
+    abstract fun bindPairingRepo(impl: PairingRepositoryImpl): PairingRepository
 }
